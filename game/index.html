@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern Light — a spot-the-difference game</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="brand">🏮 <span>Lantern Light</span></div>
+    <div class="hud-mid">
+      <div id="level-name">Lantern Light</div>
+      <div id="timer-wrap" title="Time left">
+        <div id="timer-fill"></div>
+        <span id="timer-text">3:00</span>
+      </div>
+    </div>
+    <div class="hud-right">
+      <div id="counter">Found 0 / 7</div>
+      <div id="score">Score 0</div>
+      <div id="combo"></div>
+    </div>
+    <div class="hud-btns">
+      <button id="hint-btn" type="button">💡 Hint (3)</button>
+      <button id="pause-btn" type="button">⏸ Pause</button>
+      <button id="restart-btn" type="button">↻ Restart</button>
+      <button id="sound-btn" type="button">🔊 Sound</button>
+      <button id="levels-btn" type="button">▦ Levels</button>
+    </div>
+  </header>
+
+  <main id="stage">
+    <section class="panel-wrap">
+      <canvas id="panel-a" width="520" height="620"></canvas>
+      <div class="panel-label">Picture A</div>
+    </section>
+    <section class="panel-wrap">
+      <canvas id="panel-b" width="520" height="620"></canvas>
+      <div class="panel-label">Picture B</div>
+    </section>
+    <aside id="sidebar">
+      <h2>Differences</h2>
+      <p class="side-note">Found ones are named.<br>Hidden ones stay “???”.</p>
+      <ul id="checklist"></ul>
+      <div class="side-foot">
+        <p>Click a difference on either picture, or move the crosshair with the arrow keys and press Enter.</p>
+        <p>H hint · P pause · R restart · M sound</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer id="keys">
+    <span>🖱 Click a difference</span><span>⌨ Arrows move · Enter marks</span>
+    <span>H hint (−50)</span><span>Wrong click −15 pts, −3s</span>
+    <span>P pause · R restart · M sound</span>
+  </footer>
+</div>
+
+<div id="overlay" class="hidden"></div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
