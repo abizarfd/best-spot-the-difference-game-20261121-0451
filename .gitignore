@@ -1,1 +1,10 @@
 out/
+submission.json
+wallet.json
+.env
+*.pem
+*.key
+__pycache__/
+node_modules/
+transcripts.tar.gz
+.env.*
